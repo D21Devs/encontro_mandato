@@ -60,7 +60,7 @@ body {
 
 .chamada-img {
   width: 100%;
-  max-width: 600px;
+  max-width: 60hat 0px;
   height: auto;
   display: block;
 }
@@ -228,30 +228,89 @@ body {
 }
 
 @media (max-width: 900px) {
+  body {
+    background: #d9d9d9;
+  }
+
+  .page {
+    width: min(390px, calc(100% - 18px));
+    margin: 8px auto;
+    background: var(--roxo);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+  }
+
+  .secao {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .secao-hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: 44% 56%;
+    gap: 10px;
+    padding-top: 8px;
+    padding-bottom: 6px;
   }
 
-  .secao-textos {
-    flex-direction: column;
-    align-items: flex-start;
+  .hero-img {
+    max-width: 170px;
   }
 
-  .texto-convite {
-    font-size: 1.2rem;
+  .chamada-img {
+    max-width: 210px;
   }
 
-  .texto-acao {
-    font-size: 1.7rem;
+  .secao-info {
+    gap: 8px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .info-item {
+    gap: 4px;
+  }
+
+  .info-item img {
+    width: 22px;
+    height: 22px;
   }
 
   .info-item p {
-    font-size: 1.25rem;
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  .info-endereco p {
+    font-size: 9px;
+    line-height: 1.12;
+  }
+
+  .secao-textos {
+    align-items: center;
+    gap: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .texto-convite {
+    font-size: 12px;
+    max-width: 190px;
+  }
+
+  .texto-acao {
+    font-size: 16px;
+  }
+
+  .secao-formulario {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .form-box {
-    padding: 34px 20px;
-    border-radius: 20px;
+    border-radius: 0;
+    padding: 22px 12px 26px;
+    min-height: 470px;
   }
 
   .form-grid {
@@ -259,19 +318,46 @@ body {
   }
 
   .form-field label {
+    font-size: 13px;
+  }
+
+  .form-field input {
+    height: 42px;
     font-size: 14px;
   }
 
   .btn-enviar {
-    font-size: 18px;
+    height: 46px;
+    font-size: 16px;
+  }
+
+  .secao-contato {
+    padding: 14px 0;
   }
 
   .contato-wrap {
-    flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .contato-texto {
-    text-align: center;
+    text-align: right;
+    font-size: 11px;
+  }
+
+  .contato-telefone img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contato-telefone span {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .page {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
   }
 }
