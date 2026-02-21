@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encontro do Mandato</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="secao secao-hero">
+      <div class="hero-foto">
+        <img class="hero-img" src="img/homem.png" alt="Foto do convidado" />
+      </div>
+
+      <div class="hero-chamada">
+        <img class="chamada-img" src="img/chamada.png" alt="Chamada do evento" />
+      </div>
+    </section>
+
+    <section class="secao secao-info">
+      <div class="info-item">
+        <img src="img/calendario.png" alt="Calendário" />
+        <p>13 MARÇO</p>
+      </div>
+
+      <div class="info-item">
+        <img src="img/relogio.png" alt="Relógio" />
+        <p>14 HORAS</p>
+      </div>
+
+      <div class="info-item info-endereco">
+        <img src="img/localização.png" alt="Localização" />
+        <p>SESC Venda Nova<br />Rua Maria Borboleta<br />s/n Novo - Letícia</p>
+      </div>
+    </section>
+
+    <section class="secao secao-textos">
+      <p class="texto-convite">
+        Quero te apresentar os resultados do trabalho<br />
+        que entregamos para Minas e para o Brasil.
+      </p>
+
+      <p class="texto-acao">&laquo;&laquo; INSCREVA-SE &raquo;&raquo;</p>
+    </section>
+
+    <section class="secao secao-formulario">
+      <div class="form-box">
+        <form class="lp-form" action="beckend/processar_inscricao.php" method="post">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" required />
+            </div>
+
+            <div class="form-field">
+              <label for="whatsapp">WhatsApp</label>
+              <input id="whatsapp" name="whatsapp" type="tel" required />
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="municipio">Município</label>
+              <input id="municipio" name="municipio" type="text" required />
+            </div>
+
+            <div class="form-field">
+              <label for="area">Área de atuação</label>
+              <input id="area" name="area" type="text" required />
+            </div>
+
+            <div class="form-field">
+              <label for="cargo">Cargo</label>
+              <input id="cargo" name="cargo" type="text" required />
+            </div>
+          </div>
+
+          <button class="btn-enviar" type="submit">Confirmar inscrição</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="secao-contato">
+      <div class="secao contato-wrap">
+        <p class="contato-texto">Em caso de dúvidas<br />entre em contato conosco:</p>
+        <div class="contato-telefone">
+          <img src="img/zap.png" alt="WhatsApp" />
+          <span>(31) 97302-6743</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

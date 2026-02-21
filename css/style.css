@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap");
+
+:root {
+  --roxo: #6D1BB8;
+  --amarelo: #f4bf00;
+  --branco: #ffffff;
+  --fundo-placeholder: rgba(255, 255, 255, 0.12);
+  --cinza-box: #efefef;
+  --borda-input: #c7c7c7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--roxo);
+  color: var(--branco);
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.secao {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.secao-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 28px;
+  padding-top: 18px;
+  padding-bottom: 10px;
+}
+
+.hero-foto {
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-chamada {
+  display: flex;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+.chamada-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+}
+
+.secao-info {
+  width: 100%;
+  max-width: 100%;
+  background: var(--amarelo);
+  color: var(--roxo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.info-item img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.info-item p {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.info-endereco p {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.secao-textos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.texto-convite {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.texto-acao {
+  font-size: 2.2rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.secao-formulario {
+  padding-top: 8px;
+  padding-bottom: 46px;
+}
+
+.form-box {
+  background: var(--cinza-box);
+  border-radius: 30px;
+  padding: 58px 72px;
+}
+
+.lp-form {
+  width: min(620px, 100%);
+  margin: 0 auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 14px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  color: #1f1f1f;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.form-field input {
+  border: 1px solid var(--borda-input);
+  border-radius: 12px;
+  background: #f2f2f2;
+  height: 54px;
+  padding: 0 14px;
+  font-size: 15px;
+  color: #222222;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.btn-enviar {
+  margin-top: 22px;
+  width: 100%;
+  height: 56px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--amarelo);
+  color: #111111;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  filter: brightness(0.96);
+}
+
+.secao-contato {
+  width: 100%;
+  background: var(--amarelo);
+  color: var(--roxo);
+  padding: 24px 0;
+}
+
+.contato-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+}
+
+.contato-texto {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: right;
+}
+
+.contato-telefone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contato-telefone img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.contato-telefone span {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .secao-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .secao-textos {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .texto-convite {
+    font-size: 1.2rem;
+  }
+
+  .texto-acao {
+    font-size: 1.7rem;
+  }
+
+  .info-item p {
+    font-size: 1.25rem;
+  }
+
+  .form-box {
+    padding: 34px 20px;
+    border-radius: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field label {
+    font-size: 14px;
+  }
+
+  .btn-enviar {
+    font-size: 18px;
+  }
+
+  .contato-wrap {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contato-texto {
+    text-align: center;
+  }
+}
